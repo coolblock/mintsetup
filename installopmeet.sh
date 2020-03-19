@@ -1,14 +1,14 @@
 cd
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5AFA7A83
 
-deb [arch=amd64] http://ubuntu.openvidu.io/6.10.0 bionic kms6
-deb [arch=amd64] http://mirror.yandex.ru/ubuntu/ bionic main restricted
-deb [arch=amd64] http://mirror.yandex.ru/ubuntu/ bionic universe
+#deb [arch=amd64] http://ubuntu.openvidu.io/6.10.0 bionic kms6
+#deb [arch=amd64] http://mirror.yandex.ru/ubuntu/ bionic main restricted
+#deb [arch=amd64] http://mirror.yandex.ru/ubuntu/ bionic universe
 
 sudo apt-get update && sudo apt-get install --yes kurento-media-server
 
 
-apt install openjdk-8-jre-headless
+apt install openjdk-8-jre-headless -y
 
 
 #sudo add-apt-repository --yes ppa:webupd8team/java
@@ -47,7 +47,6 @@ service mysql restart
 
 
 
-mysql -u root -p
 
 mysql -uroot -proot -e 'CREATE DATABASE openmeetings;'
 mysql -uroot -proot -e 'CREATE USER openmeetings;'
